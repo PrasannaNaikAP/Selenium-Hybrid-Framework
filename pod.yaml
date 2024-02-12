@@ -1,0 +1,14 @@
+vi nginx-pod.yml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx
+  labels:
+    apps: nginx
+spec:
+  containers:
+  - name: nginx
+    image: myawspk/myrepo:tagname
+    imagePullPolicy: IfNotPresent
+    ports:
+    - containerPort: 80
