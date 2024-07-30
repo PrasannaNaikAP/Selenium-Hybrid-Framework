@@ -1,0 +1,30 @@
+AWS Virtual Private Cloud (VPC)
+
+Amazon Virtual Private Cloud (VPC) lets you provision a logically isolated section of the AWS cloud where you can launch AWS resources in a virtual network that you define. Here are the key components and concepts of AWS VPC:
+
+Key Components
+
+1. Subnets
+   - Public Subnets: Subnets with a route to the internet gateway, allowing instances to access the internet.
+   - Private Subnets: Subnets without a route to the internet gateway, keeping instances isolated from the internet.
+
+2. Route Tables
+   - Defines the traffic routing for subnets. Each subnet is associated with a route table that controls the routing of traffic leaving the subnet.
+
+3. Internet Gateway (IGW)
+   - A horizontally scaled, redundant, and highly available VPC component that allows communication between instances in your VPC and the internet.
+
+4. NAT Gateway
+   - Enables instances in a private subnet to connect to the internet or other AWS services but prevents the internet from initiating a connection with those instances.
+
+5. Security Groups
+   - Acts as a virtual firewall for your instances to control inbound and outbound traffic. Security groups operate at the instance level.
+
+6. Network Access Control Lists (NACLs)
+   - An optional layer of security that acts as a firewall for controlling traffic in and out of one or more subnets. NACLs operate at the subnet level.
+
+7. VPC Endpoints
+    - Enables you to privately connect your VPC to supported AWS services and VPC endpoint services powered by AWS PrivateLink without requiring an internet gateway, NAT device, VPN connection, or AWS Direct Connect connection.
+
+8. Elastic Network Interface (ENI)
+    - A virtual network interface that you can attach to an instance in a VPC. An instance in a VPC can have multiple network interfaces.
